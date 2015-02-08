@@ -1,0 +1,5 @@
+Disallow: /assets/
+Disallow: /assets/images/
+Disallow: /styles/
+Disallow: /scripts/
+Allow: /
