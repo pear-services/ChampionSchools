@@ -111,7 +111,6 @@ _________________________________________*/
   background: no-repeat center rgba(0,0,0,.2);
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  
 }
 
 .hex-container-right .hex {
@@ -147,11 +146,8 @@ _________________________________________*/
 }
 
 .hex-container .hex:hover {
-  -webkit-transform: rotatey(360deg);
-  -moz-transform: rotatey(360deg);
-  -ms-transform: rotatey(360deg);
-  -o-transform: rotatey(360deg);
-  transform: rotatey(360deg);
+  -webkit-animation: flip 1s infinite; /* Chrome, Safari, Opera */
+  animation: flip 1s infinite;
 }
 
 .hex-container div:nth-of-type(2) section:nth-of-type(2) {
@@ -210,6 +206,19 @@ _________________________________________*/
 .hex-container-right div:nth-of-type(5) section:nth-of-type(1) {
   background: center url(../assets/images/hurdles.jpeg);
   background-size: 100px 130px;
+}
+
+/* Keyframes 
+_________________________________________*/
+
+@-webkit-keyframes flip {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(180deg);}
+}
+
+@keyframes flip {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(180deg);}
 }
 
 /* Custom Style
