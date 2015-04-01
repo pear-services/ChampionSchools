@@ -77,14 +77,21 @@ _________________________________________*/
 /* Hexagon Style
 _________________________________________*/
 
+
+/* Media Queries */
+@media (min-width: 1195px) {
+  .hex-container {
+    display: block;
+  }
+}
+
+
 .hex-row {
   clear: both;
 }
 
-/* Hexagon Container Left Style
-_________________________________________*/
-
 .hex-container {
+  display: none; /* for screens smaller than 1195px */
   position: absolute;
   overflow: hidden;
   padding-bottom: 25px;
