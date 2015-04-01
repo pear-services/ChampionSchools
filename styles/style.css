@@ -1,11 +1,16 @@
+/* Slider Style
+_________________________________________*/
+
 .slider {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
+
 .slider__wrapper {
-  height: 100%;
+  height: 300px;
+  width: 100%;
   list-style: none;
   overflow: hidden;
   *zoom: 1;
@@ -13,11 +18,21 @@
   -webkit-transform-style: preserve-3d;
   -webkit-padding-start: 0;
 }
+
 .slider__item {
-  height: 100%;
+  width: 100%;
+  height: 150%;
   float: left;
+  position: relative;
+  top: -30px;
   clear: none;
 }
+
+.slider__item img {
+  height: 100%;
+  width: 100%;
+}
+
 .slider__arrows-item {
   position: absolute;
   display: block;
@@ -25,18 +40,22 @@
   padding: 20px;
   cursor: pointer;
 }
+
 .slider__arrows-item--right {
   bottom: 50%;
   right: 30px;
 }
+
 .slider__arrows-item--left {
   bottom: 50%;
   left: 30px;
 }
+
 .slider__nav {
   position: absolute;
   bottom: 30px;
 }
+
 .slider__nav-item {
   width: 12px;
   height: 12px;
@@ -46,26 +65,215 @@
   margin: 0 5px;
   background: #fff;
 }
+
 .slider__nav-item--current {
   background: #ccc;
 }
+
 .slider__nav-item:hover {
   background: #ccc;
 }
 
+/* Hexagon Style
+_________________________________________*/
+
+.hex-row {
+  clear: both;
+}
+
+/* Hexagon Container Left Style
+_________________________________________*/
+
+.hex-container {
+  position: absolute;
+  overflow: hidden;
+  padding-bottom: 25px;
+  top: 250px;
+  z-index: 2;
+}
+
+.hex-container div:first-child {
+  margin-top: -75px;
+}
+
+.hex-container .hex {
+  width: 90px;
+  height: 100px;
+  margin-bottom: -22px;
+  background: no-repeat center rgba(0,0,0,.6);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hex-container .hex:hover {
+  -webkit-animation: flip 1s infinite; /* Chrome, Safari, Opera */
+  animation: flip 1s infinite;
+}
+
+
+/* Hexagon Container Right/Left Style
+_________________________________________*/
+
+
+/* Left */
+
+.hex-container.left {
+  left: 0;
+  float: left;
+}
+
+.hex-container.left .hex {
+  float: left;
+  margin-right: 3px;
+}
+
+.hex-container.left div:nth-of-type(even)   {
+  -webkit-transform: translateX(-46px);
+  -moz-transform: translateX(-46px);
+  -ms-transform: translateX(-46px);
+  -o-transform: translateX(-46px);
+  transform: translateX(-46px);
+}
+
+/* Right */
+.hex-container.right {
+  right: 0;
+  float: right;
+}
+
+.hex-container.right .hex {
+  float: right;
+  margin-left: 3px;
+}
+
+.hex-container.right div:nth-of-type(even)   {
+  -webkit-transform: translateX(46px);
+  -moz-transform: translateX(46px);
+  -ms-transform: translateX(46px);
+  -o-transform: translateX(46px);
+  transform: translateX(46px);
+}
+
+/* Hexagon Images
+_________________________________________*/
+
+.hex-container.left div:nth-of-type(2) section:nth-of-type(2) {
+  background: center url(../assets/images/technology-school-1236x824-1376585841.jpg);
+  background-size: 150px 130px;
+  background-position: 0 0;
+}
+
+.hex-container.left div:nth-of-type(3) section:nth-of-type(2) {
+  background: center url(../assets/images/0220.jpg);
+  background-size: 100px 130px;
+}
+
+.hex-container.left div:nth-of-type(3) section:nth-of-type(1) {
+  background: center url(../assets/images/10621.jpg);
+  background-size: 100px 130px;
+}
+
+.hex-container.left div:nth-of-type(4) section:nth-of-type(2) {
+  background: center url(../assets/images/student-with-ipad-technology-in-the-classroom1.jpg);
+  background-size: 150px 130px;
+}
+
+.hex-container.left div:nth-of-type(5) section:nth-of-type(1) {
+  background: center url(../assets/images/105411_2.jpg);
+  background-size: 100px 130px;
+  background-position: 0 10px;
+}
+
+.hex-container.left div:nth-of-type(2) section:nth-of-type(2) {
+  background: center url(../assets/images/technology-school-1236x824-1376585841.jpg);
+  background-size: 150px 130px;
+  background-position: 0 0;
+}
+
+.hex-container.right div:nth-of-type(2) section:nth-of-type(2) {
+  background: center url(../assets/images/0012.jpg);
+  background-size: 150px 130px;
+}
+
+.hex-container.right div:nth-of-type(3) section:nth-of-type(2) {
+  background: center url(../assets/images/093.jpg);
+  background-size: 200px 130px;
+}
+
+.hex-container.right div:nth-of-type(3) section:nth-of-type(1) {
+  background: center url(../assets/images/099_2.jpg);
+  background-size: 100px 130px;
+}
+
+.hex-container.right div:nth-of-type(4) section:nth-of-type(2) {
+  background: center url(../assets/images/0341.jpg);
+  background-size: 100px 130px;
+}
+
+.hex-container.right div:nth-of-type(5) section:nth-of-type(1) {
+  background: center url(../assets/images/hurdles.jpeg);
+  background-size: 100px 130px;
+}
+
+/* Hexagon Container Opt2 Style
+_________________________________________*/
+
+.hex-container-right-opt2 {
+  position: absolute;
+  overflow: hidden;
+  padding-bottom: 50px;
+  top: 580px;
+  right: 0;
+  z-index: 1;
+}
+
+.hex-container-right-opt2 div:first-child {
+  margin-top: -51px;
+}
+
+.hex-container-right-opt2 .hex {
+  width: 110px;
+  height: 100px;
+  float: right;
+  margin-left: 60px;
+  margin-bottom: -49px;
+  background: no-repeat center rgba(0,0,0,.2);
+  -webkit-clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+  
+}
+
+.hex-container-right-opt2 div:nth-of-type(even)   {
+  -webkit-transform: translateX(85px);
+  -moz-transform: translateX(85px);
+  -ms-transform: translateX(85px);
+  -o-transform: translateX(85px);
+  transform: translateX(85px);
+}
+
+
+/* @Keyframes 
+_________________________________________*/
+
+@-webkit-keyframes flip {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(180deg);}
+}
+
+@keyframes flip {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(180deg);}
+}
 
 /* Custom Style
 _________________________________________*/
 
 header {
-     /*position: fixed;*/
      height: 250px;
      width: 100%;
      background: url(../assets/images/Honeycomb.png)
  }
  main {
-     /*position: relative;
-     top: 35vh;*/
      background: #f7f7f7;
  }
  footer {
@@ -86,7 +294,7 @@ header {
      padding-top: 10px
  }
  section {
-     max-width: 960px;
+     max-width: 900px;
      margin: auto;
  }
  .content-header{
