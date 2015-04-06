@@ -9,7 +9,7 @@ _________________________________________*/
 }
 
 .slider__wrapper {
-  height: 300px;
+  height: 400px;
   width: 100%;
   list-style: none;
   overflow: hidden;
@@ -20,8 +20,6 @@ _________________________________________*/
 }
 
 .slider__item {
-  width: 100%;
-  height: 150%;
   float: left;
   position: relative;
   top: -30px;
@@ -29,8 +27,8 @@ _________________________________________*/
 }
 
 .slider__item img {
-  height: 100%;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .slider__arrows-item {
@@ -77,21 +75,12 @@ _________________________________________*/
 /* Hexagon Style
 _________________________________________*/
 
-
-/* Media Queries */
-@media (min-width: 1195px) {
-  .hex-container {
-    display: block;
-  }
-}
-
-
 .hex-row {
   clear: both;
 }
 
 .hex-container {
-  display: none; /* for screens smaller than 1195px */
+  display: none;
   position: absolute;
   overflow: hidden;
   padding-bottom: 25px;
@@ -116,7 +105,6 @@ _________________________________________*/
   -webkit-animation: flip 1s infinite; /* Chrome, Safari, Opera */
   animation: flip 1s infinite;
 }
-
 
 /* Hexagon Container Right/Left Style
 _________________________________________*/
@@ -166,111 +154,52 @@ _________________________________________*/
 
 .hex-container.left div:nth-of-type(2) section:nth-of-type(2) {
   background: center url(../assets/images/technology-school-1236x824-1376585841.jpg);
-  background-size: 150px 130px;
-  background-position: 0 0;
-}
-
-.hex-container.left div:nth-of-type(3) section:nth-of-type(2) {
-  background: center url(../assets/images/0220.jpg);
-  background-size: 100px 130px;
 }
 
 .hex-container.left div:nth-of-type(3) section:nth-of-type(1) {
   background: center url(../assets/images/10621.jpg);
-  background-size: 100px 130px;
+}
+
+.hex-container.left div:nth-of-type(3) section:nth-of-type(2) {
+  background: center url(../assets/images/0220.jpg);
 }
 
 .hex-container.left div:nth-of-type(4) section:nth-of-type(2) {
   background: center url(../assets/images/student-with-ipad-technology-in-the-classroom1.jpg);
-  background-size: 150px 130px;
 }
 
 .hex-container.left div:nth-of-type(5) section:nth-of-type(1) {
   background: center url(../assets/images/105411_2.jpg);
-  background-size: 100px 130px;
-  background-position: 0 10px;
 }
 
 .hex-container.left div:nth-of-type(2) section:nth-of-type(2) {
   background: center url(../assets/images/technology-school-1236x824-1376585841.jpg);
-  background-size: 150px 130px;
-  background-position: 0 0;
 }
 
 .hex-container.right div:nth-of-type(2) section:nth-of-type(2) {
   background: center url(../assets/images/0012.jpg);
-  background-size: 150px 130px;
 }
 
 .hex-container.right div:nth-of-type(3) section:nth-of-type(2) {
   background: center url(../assets/images/093.jpg);
-  background-size: 200px 130px;
 }
 
 .hex-container.right div:nth-of-type(3) section:nth-of-type(1) {
   background: center url(../assets/images/099_2.jpg);
-  background-size: 100px 130px;
 }
 
 .hex-container.right div:nth-of-type(4) section:nth-of-type(2) {
   background: center url(../assets/images/0341.jpg);
-  background-size: 100px 130px;
 }
 
 .hex-container.right div:nth-of-type(5) section:nth-of-type(1) {
   background: center url(../assets/images/hurdles.jpeg);
-  background-size: 100px 130px;
 }
 
-/* Hexagon Container Opt2 Style
-_________________________________________*/
-
-.hex-container-right-opt2 {
-  position: absolute;
-  overflow: hidden;
-  padding-bottom: 50px;
-  top: 580px;
-  right: 0;
-  z-index: 1;
+.hex {
+  background-size: auto 100% !important;
 }
 
-.hex-container-right-opt2 div:first-child {
-  margin-top: -51px;
-}
-
-.hex-container-right-opt2 .hex {
-  width: 110px;
-  height: 100px;
-  float: right;
-  margin-left: 60px;
-  margin-bottom: -49px;
-  background: no-repeat center rgba(0,0,0,.2);
-  -webkit-clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
-  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
-  
-}
-
-.hex-container-right-opt2 div:nth-of-type(even)   {
-  -webkit-transform: translateX(85px);
-  -moz-transform: translateX(85px);
-  -ms-transform: translateX(85px);
-  -o-transform: translateX(85px);
-  transform: translateX(85px);
-}
-
-
-/* @Keyframes 
-_________________________________________*/
-
-@-webkit-keyframes flip {
-    from {transform: rotateY(0deg);}
-    to {transform: rotateY(180deg);}
-}
-
-@keyframes flip {
-    from {transform: rotateY(0deg);}
-    to {transform: rotateY(180deg);}
-}
 
 /* Custom Style
 _________________________________________*/
@@ -282,6 +211,7 @@ header {
  }
  main {
      background: #f7f7f7;
+     box-shadow: 0 -1px 15px;
  }
  footer {
   position: relative;
@@ -380,3 +310,28 @@ header {
      font-size: 11px;
      width: 100%;
  }
+
+ /* Media Queries
+ _____________________________________*/
+
+@media (min-width: 1195px) {
+
+  .hex-container {
+    display: block; /* for screens smaller than 1195px */
+  }
+
+}
+
+
+ /* @Keyframes 
+_________________________________________*/
+
+@-webkit-keyframes flip {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(180deg);}
+}
+
+@keyframes flip {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(180deg);}
+}
