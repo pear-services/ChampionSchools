@@ -93,8 +93,8 @@ _________________________________________*/
 }
 
 .hex-container .hex {
-  width: 90px;
-  height: 100px;
+  width: 88px;
+  height: 98px;
   margin-bottom: -22px;
   background: no-repeat center rgba(0,0,0,.6);
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -123,11 +123,11 @@ _________________________________________*/
 }
 
 .hex-container.left div:nth-of-type(even)   {
-  -webkit-transform: translateX(-46px);
-  -moz-transform: translateX(-46px);
-  -ms-transform: translateX(-46px);
-  -o-transform: translateX(-46px);
-  transform: translateX(-46px);
+  -webkit-transform: translateX(-45px);
+  -moz-transform: translateX(-45px);
+  -ms-transform: translateX(-45px);
+  -o-transform: translateX(-45px);
+  transform: translateX(-45px);
 }
 
 /* Right */
@@ -142,11 +142,11 @@ _________________________________________*/
 }
 
 .hex-container.right div:nth-of-type(even)   {
-  -webkit-transform: translateX(46px);
-  -moz-transform: translateX(46px);
-  -ms-transform: translateX(46px);
-  -o-transform: translateX(46px);
-  transform: translateX(46px);
+  -webkit-transform: translateX(45px);
+  -moz-transform: translateX(45px);
+  -ms-transform: translateX(45px);
+  -o-transform: translateX(45px);
+  transform: translateX(45px);
 }
 
 /* Hexagon Images
@@ -314,7 +314,7 @@ header {
  /* Media Queries
  _____________________________________*/
 
-@media (min-width: 1195px) {
+@media (min-width: 1277px) {
 
   .hex-container {
     display: block; /* for screens smaller than 1195px */
