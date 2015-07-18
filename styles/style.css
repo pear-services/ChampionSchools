@@ -80,7 +80,7 @@ _________________________________________*/
 }
 
 .hex-container {
-  display: none;
+  display: none; /*This is so the hex-container won't show on larger screens*/
   position: absolute;
   overflow: hidden;
   padding-bottom: 25px;
@@ -212,6 +212,9 @@ header {
  main {
      background: #f7f7f7;
      box-shadow: 0 -1px 15px;
+ }
+ #copy {
+     text-align: justify;
  }
  footer {
   position: relative;
